@@ -14,9 +14,13 @@ function App() {
     <div className=''>
      <BrowserRouter>
       <Toaster position='top-right'/>
-      <Routes>          
+      <Routes path="/*"> 
+
+        <Route path="/*" element={<HomePage/>}/>            
          
         <Route path="/login" element={<LoginPage />} />
+
+        <Route path='/signup' element={<userData/>}/>
 
         <Route path="/admin/*" element={<AdminHomePage/>}/>
   
