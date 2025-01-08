@@ -21,13 +21,8 @@ function App() {
       <Routes path="/*">          
         <Route path="/*" element={<HomePage/>}/>   
         <Route path="/login" element={<LoginPage/>}/>
-
-      
-
-        <Route path="/admin/*" element={<AdminHomePage/>}/>
-        
+        <Route path="/admin/*" element={<AdminHomePage/>}/>       
       </Routes>
-
      </BrowserRouter>
     </div>
   )
