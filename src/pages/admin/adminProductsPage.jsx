@@ -11,7 +11,7 @@ export default function AdminProductsPage() {
 
   useEffect(() => {
     if(!productsLoaded){
-      axios.get("http://localhost:5000/api/products").then((res) => {
+      axios.get("https://cbc-backend-4kxb.onrender.com/api/products").then((res) => {
         
         setProducts(res.data);
         console.log(res.data);
@@ -93,7 +93,7 @@ export default function AdminProductsPage() {
                       onClick={()=>{
                         const token = localStorage.getItem("token");
 
-                        axios.delete(`http://localhost:5000/api/products/${product.productId}`, {
+                        axios.delete(`https://cbc-backend-4kxb.onrender.com/api/products/${product.productId}`, {
                           headers: {
                             Authorization: `Bearer ${token}`,
                           },
