@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -24,7 +23,7 @@ export default function EditProductForm() {
   const [lastPrice, setLastPrice] = useState(product.lastPrice);
   const [stock, setStock] = useState(product.stock);
   const [description, setDescription] = useState(product.description);
-  
+
 
 
   console.log(location)
