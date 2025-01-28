@@ -1,3 +1,4 @@
+import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
@@ -7,6 +8,11 @@ export default function LoginPage() {
 
   const [email,setEmail] = useState("Your email")
   const [password,setPassword] = useState("")
+  const googleLogin = useGoogleLogin({
+    onSuccess: (res) => {
+      console.log(res)
+    }
+  })
 
   function login(){
     axios.post("import.meta.env.VITE_BACKEND_URL/api/users/login",{
@@ -51,7 +57,10 @@ export default function LoginPage() {
       }/>
 
 
-      <button onClick={login} className='bg-white'>Login</button>
+      <button onClick={login} 
+      className='bg-white'>Login</button>
+      <button onClick={()=>{googleLogin()}}
+      className='bg-white'>Loging with google</button>
      </div>
     </div>
   );
