@@ -5,6 +5,7 @@ import HomePage from './pages/homePage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import AdminHomePage from './pages/adminHomePage'
 import { Toaster } from 'react-hot-toast'
+import ResponseTest from './pages/responseTest'
 import { GoogleOAuthProvider } from '@react-oauth/google'
 
 
@@ -22,7 +23,8 @@ function App() {
       <Routes path="/*">          
         <Route path="/*" element={<HomePage/>}/>   
         <Route path="/login" element={<LoginPage/>}/>
-        <Route path="/admin/*" element={<AdminHomePage/>}/>       
+        <Route path="/admin/*" element={<AdminHomePage/>}/>  
+        <Route path="/response" element={<ResponseTest/>}/>     
       </Routes>
       </GoogleOAuthProvider>
      </BrowserRouter>
